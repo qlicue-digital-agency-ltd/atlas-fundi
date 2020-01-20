@@ -1,26 +1,18 @@
 import 'package:atlas_fundi/components/app/sliver_app_bar.dart';
 import 'package:atlas_fundi/components/cards/earnings_card.dart';
 import 'package:atlas_fundi/components/cards/ongoing_work.dart';
-import 'package:atlas_fundi/components/cards/profile_card.dart';
+
 import 'package:flutter/material.dart';
 
 class TimelinePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text('Timeline'),
-      //   bottom: PreferredSize(
-      //     child: ProfileCard(
-      //       image: 'assets/img/woman.jpeg',
-      //     ),
-      //     preferredSize: Size(double.infinity, 130),
-      //   ),
-      // ),
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
             elevation: 0,
+
             ///Properties of app bar
             backgroundColor: Theme.of(context).primaryColor,
             floating: false,
@@ -30,7 +22,6 @@ class TimelinePage extends StatelessWidget {
             ///Properties of the App Bar when it is expanded
             flexibleSpace: FlexibleSpaceBar(
               centerTitle: true,
-              
               title: Text(
                 "Timeline",
                 style: TextStyle(
@@ -57,7 +48,9 @@ class TimelinePage extends StatelessWidget {
           ),
           SliverList(
             delegate: SliverChildListDelegate([
-              SizedBox(height: 100,),
+              SizedBox(
+                height: 100,
+              ),
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: EarningsCard(),
@@ -65,7 +58,7 @@ class TimelinePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: OngoingWork(),
-              ),            
+              ),
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(

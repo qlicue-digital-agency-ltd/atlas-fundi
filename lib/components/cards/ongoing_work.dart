@@ -1,6 +1,6 @@
 import 'package:atlas_fundi/components/buttons/icon_text_button.dart';
 import 'package:atlas_fundi/components/cards/profile_card.dart';
-import 'package:atlas_fundi/components/text_field/vertical_text.dart';
+
 import 'package:flutter/material.dart';
 
 class OngoingWork extends StatelessWidget {
