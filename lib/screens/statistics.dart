@@ -1,3 +1,4 @@
+import 'package:atlas_fundi/components/cards/earnings_summary_card.dart';
 import 'package:atlas_fundi/components/cards/graph_card.dart';
 import 'package:atlas_fundi/components/cards/wallet_balance_card.dart';
 
@@ -13,10 +14,8 @@ class StatisticsScreen extends StatelessWidget {
             title: Text('My Earnings'),
           ),
           SliverList(
-            delegate: SliverChildListDelegate([
-              WalletBalanceCard(),
-             GraphCard()
-            ]),
+            delegate: SliverChildListDelegate(
+                [WalletBalanceCard(), GraphCard(), EarningsSummaryCard()]),
           )
         ],
       ),

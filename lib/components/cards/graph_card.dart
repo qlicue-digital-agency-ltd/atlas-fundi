@@ -36,7 +36,7 @@ class GraphCard extends StatelessWidget {
                   ],
                 ),
                 Container(
-                    height: 200, child: GroupedFillColorBarChart.withData()),
+                    height: 400, child: GroupedFillColorBarChart.withData()),
                 Divider(
                   indent: 10,
                   endIndent: 10,
