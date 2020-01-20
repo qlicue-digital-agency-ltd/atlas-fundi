@@ -1,5 +1,6 @@
+import 'package:atlas_fundi/components/cards/graph_card.dart';
 import 'package:atlas_fundi/components/cards/wallet_balance_card.dart';
-import 'package:atlas_fundi/components/charts/bar_charts.dart';
+
 import 'package:flutter/material.dart';
 
 class StatisticsScreen extends StatelessWidget {
@@ -14,7 +15,7 @@ class StatisticsScreen extends StatelessWidget {
           SliverList(
             delegate: SliverChildListDelegate([
               WalletBalanceCard(),
-              Container(height: 200, child: GroupedFillColorBarChart.withData())
+             GraphCard()
             ]),
           )
         ],

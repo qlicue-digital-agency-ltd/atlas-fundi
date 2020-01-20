@@ -40,23 +40,6 @@ class GroupedFillColorBarChart extends StatelessWidget {
         fillColorFn: (_, __) =>
             charts.MaterialPalette.blue.shadeDefault.lighter,
       ),
-      // Solid red bars. Fill color will default to the series color if no
-      // fillColorFn is configured.
-      new charts.Series<OrdinalSales, String>(
-        id: 'Receive',
-        measureFn: (OrdinalSales sales, _) => sales.sales,
-        data: receivedData,
-        colorFn: (_, __) => charts.MaterialPalette.green.shadeDefault,
-        domainFn: (OrdinalSales sales, _) => sales.year,
-      ),
-      // Hollow green bars.
-      new charts.Series<OrdinalSales, String>(
-        id: 'Profit',
-        domainFn: (OrdinalSales sales, _) => sales.year,
-        measureFn: (OrdinalSales sales, _) => sales.sales,
-        data: profitData,
-        colorFn: (_, __) => charts.MaterialPalette.yellow.shadeDefault,
-      ),
     ];
   }
 }
