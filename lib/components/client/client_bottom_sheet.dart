@@ -122,7 +122,8 @@ class _ClientBottomSheetState extends State<ClientBottomSheet> {
                             : 'Swipe to Accept'),
                       ],
                     ),
-                  )),
+                  )
+                  ),
             ),
           );
         },
